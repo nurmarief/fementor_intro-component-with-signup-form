@@ -1,0 +1,15 @@
+// based on calculation 1rem = 16px
+$breakpoints: (
+  // 375px
+  'mobile': 23.4375em,
+  // 576px
+  'mobile-lg': 36em,
+  // 768px
+  'tablet': 48em,
+  // 992px
+  'tablet-lg': 62em,
+  // 1200px
+  'desktop': 75em,
+  // 1400px
+  'desktop-lg': 87.5em
+);

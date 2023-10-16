@@ -1,0 +1,20 @@
+.signup-form {
+  color: var(--dark-blue);
+  background-color: var(--white);
+  box-shadow: 0 0.8rem hsla(0, 0%, 31%, 0.5);
+}
+
+.signup-form__submit-btn {
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+  width: 100%;
+  background-color: var(--green);
+  box-shadow: 0 0.5rem var(--dark-green);
+
+  &:active {
+    position: relative;
+    top: 0.2rem;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,121 @@
+@use 'sass:map';
+@use '../../variables/breakpoints';
+
+.signup-page {
+  display: block;
+  color: var(--white);
+  background-color: var(--red);
+  background-image: url('../images/bg-intro-mobile.png');
+
+  @media screen and (width >= map.get(breakpoints.$breakpoints, 'tablet')) {
+    & {
+      background-image: url('../images/bg-intro-desktop.png');
+    }
+  }
+}
+
+.signup-page__main-content {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-block: 5rem;
+  padding-inline: 2rem;
+
+  @media screen and (width >= map.get(breakpoints.$breakpoints, 'mobile')) {
+    & {
+      padding-inline: 5rem;
+    }
+  }
+
+  @media screen and (width >= map.get(breakpoints.$breakpoints, 'mobile-lg')) {
+    & {
+      padding-inline: 10rem;
+    }
+  }
+
+  @media screen and (width >= map.get(breakpoints.$breakpoints, 'tablet')) {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+      padding-inline: 2rem;
+    }
+  }
+
+  @media screen and (width >= map.get(breakpoints.$breakpoints, 'desktop')) {
+    & {
+      padding-inline: 5rem;
+    }
+  }
+
+  @media screen and (width >= map.get(breakpoints.$breakpoints, 'desktop-lg')) {
+    & {
+      padding-inline: 10rem;
+    }
+  }
+}
+
+.signup-page__section {
+  display: block;
+
+  &_type_description {
+    @media screen and (width >= map.get(breakpoints.$breakpoints, 'tablet')) {
+      & {
+        text-align: left;
+      }
+    }
+
+    @media screen and (width >= map.get(breakpoints.$breakpoints, 'desktop')) {
+      & {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.signup-page__heading-1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  display: block;
+  padding-inline: 2rem;
+  margin-block: 1rem;
+
+  @media screen and (width >= map.get(breakpoints.$breakpoints, 'tablet')) {
+    & {
+      font-size: 3rem;
+      padding-inline: 0;
+    }
+  }
+}
+
+.signup-page__pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--blue);
+  box-shadow: 0 0.5rem hsla(0, 0%, 31%, 0.5);
+
+  @media screen and (width >= map.get(breakpoints.$breakpoints, 'tablet')) {
+    & {
+      display: block;
+    }
+  }
+}
+
+.signup-page__paragraph {
+  &_is-bold {
+    font-weight: 700;
+  }
+
+  &_type_terms-and-services {
+    font-weight: 700;
+    color: var(--red);
+  }
+}
