@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
-    jQuery: true,
+    jquery: true,
   },
   rules: {
     'import/no-extraneous-dependencies': [
